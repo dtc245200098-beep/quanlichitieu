@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Chi Tiêu Cá Nhân AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Quản Lý Chi Tiêu AI</h1>
+            <p>Hệ thống lập kế hoạch & Phân tích tài chính thông minh</p>
+        </header>
+
+        <!-- Form nhập giao dịch -->
+        <section class="card">
+            <h2>Thêm Giao Dịch Mới</h2>
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label>Số tiền (VNĐ):</label>
+                    <input type="number" id="amount" placeholder="VD: 50000" required>
+                </div>
+                <div class="form-group">
+                    <label>Loại:</label>
+                    <select id="type">
+                        <option value="expense">Chi tiêu (-)</option>
+                        <option value="income">Thu nhập (+)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ghi chú:</label>
+                    <input type="text" id="note" placeholder="VD: Ăn sáng, Lương tháng..." required>
+                </div>
+                <button type="submit" class="btn-primary">Lưu Giao Dịch</button>
+            </form>
+        </section>
+
+        <!-- Thống kê & Trợ lý AI -->
+        <!-- Thống kê & Trợ lý AI -->
+    <section class="card ai-section">
+      <h2>🤖 Trợ Lý Tài Chính AI</h2>
+      <p>Bấm nút bên dưới để AI phân tích thói quen hoặc nhập câu hỏi trực tiếp:</p>
+      
+      <!-- Ô nhập câu hỏi -->
+      <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+          <input type="text" id="ai-input" placeholder="VD: Tháng này tôi tiêu nhiều nhất vào đâu?" style="flex: 1; padding: 8px;">
+          <button onclick="askAI()" style="padding: 8px 15px; background: #28a745; color: white; border: none; cursor: pointer;">Gửi</button>
+      </div>
+
+      <!-- Nút Phân tích -->
+      <button onclick="analyzeExpenses()" class="btn-ai" style="width: 100%;">
+          Phân Tích Chi Tiêu Bằng AI
+      </button>
+
+      <!-- Khung hiển thị kết quả -->
+      <div id="ai-output" style="margin-top: 15px; padding: 12px; background: #f8f9fa; border-left: 4px solid #28a745; font-style: italic; color: #333;">
+          Kết quả phân tích từ AI sẽ hiển thị ở đây...
+      </div>
+    </section>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
